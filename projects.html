@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RBC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            body{
+                background-color: #ffffff; /*#c7c1c1*/
+            }
+            h1{
+                margin-top: 6%;
+                text-align: center;
+                font-size: 150%;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            h2{
+                text-align: center;
+                font-size: 120%;
+            }
+            p{
+                margin-top: 1%;
+                text-align: center;
+                font-size: 110%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .container_form1 {
+                margin-top: -6%;
+                width: 700px;
+                margin-left: 10%;
+                /*display: flex;*/
+                flex-direction: column;
+                background:#ffffff; 
+                box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+                border-radius:3px; 
+                padding:1em;
+                display: inline-block;
+                flex: 1;
+            }
+            .container_form2 {
+                margin-top: -32%;
+                width: 700px;
+                display: inline-block;
+                flex: 1;
+                margin-left: 50%;
+                /*display: flex;*/
+                flex-direction: column;
+                background:#ffffff; 
+                box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+                border-radius:3px; 
+                padding:1em;
+            }
+            .bt1{
+                float: left;
+                display: block;
+                padding: 5px 30px;
+                border: none;
+                outline: none;
+                background-color: #000000;
+                color: #fff;
+                text-shadow: 0 0 5px rgb(0, 0, 0);
+                font-family: inherit;
+                font-size: 25px;
+                font-family:'open_sansregular';
+                border-radius: 6px;
+                margin: 20px auto;
+                margin-left: -5%;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .bt1:hover {
+                background-color: #444444;
+                transform: scale(1.03);
+            }
+            .bt2{
+                float: left;
+                display: block;
+                padding: 5px 30px;
+                border: none;
+                outline: none;
+                background-color: #000000;
+                color: #fff;
+                text-shadow: 0 0 5px rgb(0, 0, 0);
+                font-family: inherit;
+                font-size: 25px;
+                font-family:'open_sansregular';
+                border-radius: 6px;
+                margin: 20px 30px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .bt2:hover {
+                background-color: #444444;
+                transform: scale(1.03);
+            }
+            .botao{
+                text-align: center;
+                margin-left: 37%;
+            }
+            .card {
+                text-align: center;
+                display: none;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                padding: 20px;
+                /*margin-top: 100px;*/
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 700px;
+                margin: auto;
+            }
+
+            .card.show {
+                display: block;
+            }
+            .dreamS{
+                margin-right: 43%;
+                font-family: 'open_sansregular', 'inherit';
+            }
+            .descD{
+                text-align: justify;
+                margin-left: 6%;
+                margin-top: -1%;
+            }
+            .img:hover{
+                transform: scale(1.1); /* Aplicando zoom out ao passar o mouse */
+            }
+            .blurred-text {
+                margin-left: 6%;
+                margin-top: -1%;
+                font-size: 25px; 
+                font-family: 'open_sansregular', 'inherit';
+                filter: blur(5px); 
+                text-align: justify;
+            }
+            .img-container {
+                position: relative;
+                display: inline-block;
+            }
+            .img-blurred{
+                filter: blur(5px); 
+
+            }
+            .img-blurred:hover{
+                transform: scale(1.1); /* Aplicando zoom out ao passar o mouse */
+            }
+            .img-overlay {
+                position: absolute;
+                display: flex;
+                font-size: 25px; 
+                margin-left: 7%;
+                font-family: 'open_sansregular', 'inherit';
+                color: orange; /* Cor do texto */
+                opacity: 0; /* Invisível por padrão */
+                transition: opacity 0.3s ease-in-out; /* Efeito suave para a visibilidade */
+            }
+            .img-container:hover .img-overlay {
+                opacity: 1; /* Tornar o texto visível */
+            }
+        </style>
+
+    </head>
+    <body>
+ 
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="index.html" class="w3-bar-item w3-button"><b>RBC</b> Research Behavioral Corporation</a>
+            </div>
+        </div>
+
+        <h1><b>Hello, collaborator!</b></h1>
+        <h2 class="w3-wide">Do you need to access:</h2>
+        <div class="botao">
+            <p><input type="button" onclick="showprojects('mensagem')" class="bt1" id="bt1" name="bt1" value="  Projects  "></p>
+            <p><input type="button" onclick="showprototipal('Sorry, you are not allowed to access prototipal session. If it is an issue, please contact the support.')" class="bt2" id="bt2" name="bt2" value="Prototipal"></p>
+        </div>
+            <br>
+
+            <br><br><br><br>
+            <div class="card" style="height: 2100px; margin-bottom: 3%;" id="mensagem">
+                
+                <div style="display: flex; align-items: center;">
+                    <h1 class="dreamS">⠀Sleep quality monitor <br><i>DreamSync</i></h1>
+                    <h2 style="color: green; margin-left: -18%; margin-top: 9%;"><i>Completed</i></h2>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img class="img w3-card" src="https://i.imgur.com/S9euhXZ.jpeg" style="width: 170px; height: 150px; border-radius: 5px; text-align: justify; margin-left: 5%; margin-top: -10%;">
+                    <p class="descD">⠀⠀⠀This electronic device measures parameters such as heart rate, nocturnal movements, and sleep patterns, sending data to a mobile application. It provides detailed reports on sleep quality and tips for improvement, as well as alerts about possible issues like sleep apnea. It's a type of sensor placed under the pillow that uses transmitting waves to assist those suffering from insomnia or other sleep disorders.</p>
+                </div>
+
+
+
+                <div style="display: flex; align-items: center;">
+                    <h1 class="dreamS">Brain stimulation technology <br><i>NeuroPulse</i></h1>
+                    <h2 style="color: green; margin-left: -28%; margin-top: 9%;"><i>Completed</i></h2>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img class="img w3-card" src="https://i.imgur.com/U4KhnlE.jpeg" style="width: 170px; height: 150px; border-radius: 5px; text-align: justify; margin-left: 5%; margin-top: -10%;">
+                    <p class="descD">⠀⠀⠀This innovative device uses brain stimulation technology to enhance memory and concentration. It employs gentle electrical or magnetic pulses to stimulate key brain regions critical for information retention, focus, and mental clarity. The device is portable, discreet, and easy to use, making it ideal for those seeking to improve cognitive performance at home or at work.</p>
+                </div>
+
+
+
+                <div style="display: flex; align-items: center;">
+                    <h1 class="dreamS">Portable Cognitive Device <br><i>CogniStim</i></h1>
+                    <h2 style="color: green; margin-left: -25%; margin-top: 9%;"><i>Completed</i></h2>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img class="img w3-card" src="https://i.imgur.com/U4KhnlE.jpeg" style="width: 170px; height: 150px; border-radius: 5px; text-align: justify; margin-left: 5%; margin-top: -10%;">
+                    <p class="descD">⠀⠀⠀Its portability and USB charging capability make it accessible to users of all ages, including children, adults, and the elderly. The device comes preloaded with a range of engaging activities and games targeting various cognitive domains, including memory, logic, attention, and processing speed. These activities can range from puzzles and word association games to mazes and math challenges. </p>
+                </div>
+
+
+
+                <div class="img-container">
+                    <div style="display: flex; align-items: center;">
+                        <h1 class="dreamS" style="margin-left: 1%;">⠀Neurotransmitter Chip <br><i>Synapse</i></h1>
+                        <h2 style="color: orange; margin-left: -20%; margin-top: 9%;"><i>Ongoing</i></h2>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <img class="img-blurred w3-card" src="https://i.imgur.com/ysO2o8f.jpeg" style="width: 170px; height: 150px; border-radius: 5px; text-align: justify; margin-left: 5%; margin-top: -15%;">
+                        <div class="img-overlay"><a title="Infini Team" target="_blank" class="w3-hover-text-yellow"><i>Confidential</i></a></div> 
+                        <p class="blurred-text">
+                            ⠀⠀⠀Ta me tirando tio nao tem nada aqui pra ler nao ta maluco vei se é louco ta querendo meter o crazy achou que ia burlar meu sistema maluco voce pensa que eh esperto jacare é muito mais ele dorme de olho aberto coisa que você nao faz.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="img-container">
+                    <div style="display: flex; align-items: center;">
+                        <h1 class="dreamS" style="margin-left: 1%;">Governmental Substance <br><i>Project SS</i></h1>
+                        <h2 style="color: orange; margin-left: -20%; margin-top: 9%;"><i>Ongoing</i></h2>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        
+                        <img class="img-blurred w3-card" src="https://i.imgur.com/tXbiu0u.jpeg" style="width: 170px; height: 150px; border-radius: 5px; text-align: justify; margin-left: 5%; margin-top: -15%;">
+                        <div class="img-overlay"><a title="Alfa Team" target="_blank" class="w3-hover-text-yellow"><i>Confidential</i></a></div> 
+                        <p class="blurred-text">
+                            ⠀⠀⠀Ta me tirando tio nao tem nada aqui pra ler nao ta maluco vei se é louco ta querendo meter o crazy achou que ia burlar meu sistema maluco voce pensa que eh esperto jacare é muito mais ele dorme de olho aberto coisa que você nao faz.
+                        </p>
+                    </div>
+                </div>
+
+              
+
+
+            </div>  
+            <div class="card" id="mensagem2"></div>
+            
+
+            <script>
+
+                function showprojects(mensagem) {
+                    var mensagemDiv = document.getElementById("mensagem");
+                    var heading = mensagemDiv.querySelector("h1");
+                    mensagemDiv.classList.add("show");
+
+                    // Adiciona um evento de clique ao botão que deve ocultar a mensagem
+                    var botaoOcultar = document.querySelector(".botao .bt2");
+                    botaoOcultar.addEventListener("click", function() {
+                        mensagemDiv.classList.remove("show");
+                    });
+                }
+
+                function showprototipal(mensagem) {
+                    var mensagemDiv = document.getElementById("mensagem2");
+                    mensagemDiv.textContent = mensagem;
+                    mensagemDiv.classList.add("show");
+                
+
+                    // Adiciona um evento de clique ao botão que deve ocultar a mensagem
+                    var botaoOcultar = document.querySelector(".botao .bt1");
+                    botaoOcultar.addEventListener("click", function() {
+                        mensagemDiv.classList.remove("show");
+                    });
+
+                }
+
+                //TODO: projects we have the completed ones and ongoing.     
+
+            </script>
+
+            
+
+  
+    </body>
+</html>

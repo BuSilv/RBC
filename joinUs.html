@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>RBC</title>
+        <style>
+            .container_form {
+                width: 700px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                background:#ffffff; 
+                box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+                border-radius:3px; 
+                padding:1em;
+            }
+            .container_form h1 {
+                font-family:'open_sansregular';
+                font-size: 2.3em;
+                color: #000000;
+                border-bottom: 1px #f0eded solid;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            .form_grupo {
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                position: relative;
+            }
+            .form_grupo .legenda { 
+                width: 100%;
+                float: left;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+            /* SUBMIT */
+            .submit { width:100%; float:left; }
+            .submit_btn {
+                float: left;
+                display: block;
+                padding: 5px 30px;
+                border: none;
+                outline: none;
+                background-color: #000000;
+                color: #fff;
+                text-shadow: 0 0 5px rgb(0, 0, 0);
+                font-family: inherit;
+                font-size: 25px;
+                font-family:'open_sansregular';
+                border-radius: 6px;
+                margin: 20px auto;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .submit_btn:hover {
+                background-color: #444444;
+                transform: scale(1.03);
+            }
+            .dropdown {
+                display: block;
+                margin: 0 auto;
+                font-size: 16px;
+                font-family: inherit;
+                color: #222222;
+                border-radius: 4px;
+                border: 1px #f2f2f2 solid;
+                background: #fdfdfd;
+                outline: none;
+                padding-left: 10px;
+                width: 100%;
+            }
+            .form_new_input {
+                display: none;
+            }
+            .radio_label,
+            .check_label {
+                float: left;
+                width: 100%;
+                padding-left: 30px;
+                cursor: pointer;
+                margin-bottom: 8px;
+            }
+            .radio_new_btn {
+                position: absolute;
+                left: 0;
+                transform: translateY(3px);
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 0.2em solid #4c4c4c;
+            }
+            .radio_new_btn::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #000000;
+                visibility: hidden;
+            }
+            .check_new_btn {
+                position: absolute;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                border: 0.2em solid #4c4c4c;
+            }
+            .check_new_btn::after {
+                content: "";
+                height: 8px;
+                width: 8px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #000000;
+                visibility: hidden;
+            }
+            .form_new_input:checked ~ .radio_label .radio_new_btn::after,
+            .form_new_input:checked ~ .check_label .check_new_btn::after {
+            
+                visibility: visible;
+            }
+            .form_new_input:checked ~ .radio_label,
+            .form_new_input:checked ~ .check_label {
+                color: #000000;
+            }
+            .form_grupo {
+                width: 100%;
+                margin-bottom: 20px;
+                position: relative;
+            }
+            .form_input {
+                font-size: 16px;
+                font-family: inherit;
+                padding: 8px 15px;
+                border-radius: 4px;
+                border: 1px #f2f2f2 solid;
+                background: #fdfdfd;
+                outline: none;
+                width: 100%;
+                transition: all 0.3s;
+            }
+            .form_message,
+            .form_message .message_input {
+                width: 100%;
+                float:left;
+            }
+            .form_message_label {
+                width: 100%;
+                float: left;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                font-weight: bold;
+                
+            }
+        </style>
+        <script>
+            function voltar() {
+                window.location.href = "index.html"; // Altere para o nome do arquivo da página inicial
+            }
+            function successPage() {
+                window.location.href = "success.html";
+            }
+            function aboutPage() {
+                window.location.href = "about.html";
+            }
+            function contactPage() {
+                window.location.href = "contact.html";
+            }
+            function collaboradorsPage() {
+                window.location.href = "collaborators.html";
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="index.html" class="w3-bar-item w3-button"><b>RBC</b> Research Behavioral Corporation</a>
+                <div class="w3-right w3-hide-small">
+                    <button onclick=collaboradorsPage() class="w3-bar-item w3-button">Collaborators</a>
+                    <button onclick=aboutPage() class="w3-bar-item w3-button">About</a>
+                    <button onclick=contactPage() class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br>
+        <div class="container_form">
+        <h1>Registration form</h1>
+
+        <form class="form" action="#" method="post">
+        <div class="form_grupo">
+            <label for="nome" class="form_label">Name</label>
+            <input type="text" name="nome" class="form_input" id="nome" placeholder="Write your name here" required>
+        </div>
+        
+        <div class="form_grupo">
+            <label for="e-mail" class="form_label">E-mail</label>
+            <input type="email" name="email" class="form_input" id="email" placeholder="Write your e-mail here" required>
+        </div>
+
+        <div class="form_grupo">
+            <label for="datanascimento" class="form_label">Birth date</label>
+            <input type="text" name="datanascimento" class="form_input" id="datanascimento" placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" maxlength="8" required>
+        </div>
+        
+        <script>
+            var inputDate = document.getElementById('datanascimento');
+            inputDate.addEventListener('input', function() {
+                var trimmedValue = this.value.replace(/\D/g, '');
+                var formattedValue = trimmedValue.replace(/(\d{2})(\d{2})(\d{4})/, '$1/$2/$3');
+                this.value = formattedValue;
+            });
+        </script>
+
+        <div class="form_grupo">
+            
+            <label for="estadocivil" class="text">Marital status</label>
+            <select name="estadocivil" class="dropdown" required>
+                
+                <option selected disabled class="form_select_option" value="">Select</option>
+                <option value="Solteiro" class="form_select_option">Single</option>
+                <option value="Casado" class="form_select_option">Married</option>
+                <option value="Divorciado" class="form_select_option">Divorced</option>                    
+                <option value="Viúvo" class="form_select_option">Widowed</option>                    
+            
+            </select>
+
+        </div>
+
+        <div class="form_grupo">
+
+            <span class="legenda">Pronouns:</span>
+            
+            <div class="radio-btn">
+                <input type="radio" class="form_new_input" id="masculino" name="Pronouns" value="Masculino" required="required">
+                <label for="masculino" class="radio_label form_label"> <span class="radio_new_btn"></span> He/him</label>
+            </div>
+
+            <div class="radio-btn">
+                <input type="radio" class="form_new_input" id="feminino" name="Pronouns" value="Feminino" required="required">
+                <label for="feminino" class="radio_label form_label"> <span class="radio_new_btn"></span> She/her</label>
+            </div>
+
+            <div class="radio-btn">
+                <input type="radio" class="form_new_input" id="outro" name="Pronouns" value="Outro" required="required">
+                <label for="outro" class="radio_label form_label"> <span class="radio_new_btn"></span> They/them</label>
+            </div>
+
+        </div>
+      
+
+            <div class="submit">
+              <input type="hidden" name="acao" value="enviar">
+              <button type="button" name="Submit" class="submit_btn" id="enviarBtn" onclick="successPage()">Register</button>
+            </div>
+    </form>
+
+</div><!--container_form-->
+
+    </body>
+</html>

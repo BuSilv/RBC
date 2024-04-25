@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>RBC</title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            h2{
+                text-align: center;
+            }
+            .back{
+                text-align: center;
+            }
+            *{  
+                margin: 0; 
+                padding: 0; 
+                box-sizing: border-box; 
+                -moz-box-sizing: border-box; 
+                -webkit-box-sizing: border-box;
+            
+            }
+            html { background-color: #404040; }
+            body { font-family:"Poppins", sans-serif; height:100vh; }
+            h2 {
+                text-align: left;
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: #0d0d0d;
+                border-bottom: 1px solid #f6f6f6;
+                padding: 15px 15px;
+                width: 100%;
+                float: left;
+            }
+            .wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: column; 
+                justify-content: center;
+                width: 100%;
+                min-height: 100%;
+            }
+            .content-login {
+                -webkit-border-radius: 4px;
+                border-radius: 10px 10px 10px 10px;
+                background: #fff;
+                padding: 30px;
+                width: 95%;
+                max-width: 320px;
+                position: relative;
+                padding: 0px;
+                -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+                box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+                text-align: center;
+            }
+            .box-login { 
+                width: 100%;
+                float: left;
+                padding: 10px;
+            }
+            .box-lembrar-senha {
+                width:100%;
+                float:left;
+                background-color: #f6f6f6;
+                border-top: 1px solid #dce8f1;
+                padding: 25px;
+                text-align: center;
+                -webkit-border-radius: 0 0 10px 10px;
+                border-radius: 0 0 10px 10px;
+            }
+            .botao {
+                width:100%;
+                display: block;
+                float:left;
+                background-color: #585654;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                padding: 15px 80px;
+                text-align: center;
+                font-size:18px;
+                -webkit-border-radius:4px;
+                border-radius:4px;
+                transition: 0.3s;
+            }
+            .botao:hover  { background-color: #404040; }
+            .campo {
+                background-color: #f6f6f6;
+                border: none;
+                outline: none;
+                color: #0d0d0d;
+                padding: 10px 5px;
+                text-decoration: none;
+                font-size: 16px;
+                margin-bottom: 10px;
+                width: 100%;
+                border: 2px solid #f6f6f6;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                float: left;
+                transition: 0.3s;
+            }
+            .campo:focus {
+                background-color: #fff;
+                color:#2e2d2c;
+            }
+            .campo:placeholder {
+                color: #cccccc;
+            }
+            .link {
+                color: #61605f;
+                display:inline-block;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            .link:hover { color:#404040; }
+            /* Animação */
+            .fadeInDown {
+                -webkit-animation-name: fadeInDown;
+                animation-name: fadeInDown;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+            @-webkit-keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+            }
+            @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+            }
+            /* Animação Fade-in*/
+            @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+            @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+            @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+            .fadeIn {
+                opacity:0;
+                -webkit-animation:fadeIn ease-in 1;
+                -moz-animation:fadeIn ease-in 1;
+                animation:fadeIn ease-in 1;
+                -webkit-animation-fill-mode:forwards;
+                -moz-animation-fill-mode:forwards;
+                animation-fill-mode:forwards;
+                -webkit-animation-duration:2s;
+                -moz-animation-duration:2s;
+                animation-duration:2s;
+            }
+        </style>
+        <script>
+            function aboutPage() {
+                window.location.href = "about.html";
+            }
+            function contactPage() {
+                window.location.href = "contact.html";
+            }
+            function collaboradorsPage() {
+                window.location.href = "collaborators.html";
+            }
+            function newpage(){
+                window.location.href = "projects.html";
+            }
+            function alertpassword(){
+                alert("Contact the support team by e-mail to reset your password:\n\nrbcsuporttec@gmail.com")
+            }
+
+        </script>
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="index.html" class="w3-bar-item w3-button"><b>RBC</b> Research Behavioral Corporation</a>
+
+                <div class="w3-right w3-hide-small">
+                    <button onclick=collaboradorsPage() class="w3-bar-item w3-button">Collaborators</a>
+                    <button onclick=aboutPage() class="w3-bar-item w3-button">About</a>
+                    <button onclick=contactPage() class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Tela de login-->
+        <div class="wrapper fadeInDown">
+  
+            <div class="content-login">
+                <h2 class="active"> Login </h2>
+                <form class="box-login" id="loginForm" method="post" action="#">
+                  <input type="email" id="email" class="campo" name="email" placeholder="E-mail" required>
+                  <input type="password" id="password" class="campo" name="senha" placeholder="Password" required>
+                  <input type="submit" class="botao" value="Confirm">
+                </form>
+                <div class="box-lembrar-senha">  
+                  <a class="link" onclick=alertpassword() id="pswrd">Forgot password?</a>
+                </div>
+            </div><!--Form Content-->
+          </div><!--wrapper-->
+
+        <script>
+            document.getElementById("loginForm").addEventListener("submit", function(event) {
+            // Prevent the form from submitting
+                event.preventDefault();
+
+                // Get the values of email and password fields
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+
+                // Define the fixed values
+                var fixedEmail = "reymondjones@rbc.com";
+                var fixedPassword = "_WILMIS340";
+
+                // Check if the values match the fixed values
+                if (email === fixedEmail && password === fixedPassword) {
+                    newpage();
+                    // Here you can redirect the user to another page or perform any other actions
+                } else {
+                    alert("Invalid email or password. Please try again.");
+                }
+            });
+        </script>
+
+
+    </body>
+</html>

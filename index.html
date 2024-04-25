@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RBC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            body{
+                background-color: #ffffff; /*#c7c1c1*/
+            }
+        </style>
+        <script>
+            function aboutPage() {
+                window.location.href = "about.html";
+            }
+            function contactPage() {
+                window.location.href = "contact.html";
+            }
+            function collaboradorsPage() {
+                window.location.href = "collaborators.html";
+            }
+            function joinPage() {
+                window.location.href = "joinUs.html";
+            }
+        </script>
+    </head>
+    <body>
+    <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="index.html" class="w3-bar-item w3-button"><b>RBC</b> Research Behavioral Corporation</a>
+
+                <!-- Float links to the right. Hide them on small screens -->
+                <div class="w3-right w3-hide-small">
+                    <button onclick=collaboradorsPage() class="w3-bar-item w3-button">Collaborators</a>
+                    <button onclick=aboutPage() class="w3-bar-item w3-button">About</a>
+                    <button onclick=contactPage() class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+        </div>
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://i.imgur.com/bbngGmK.jpg" alt="RBC" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>RBC</b></span> <span class="w3-hide-small w3-text-light-grey"><i>Research</i></span></h1>
+  </div>
+</header>
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-16 w3-card">
+    <p><i>Together to change the world. <a onclick=joinPage() title="Home" target="_blank" class="w3-hover-text-green"></i><u>Join us</u></a></p>
+</footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>RBC</title>
+        <script>
+            function aboutPage() {
+                window.location.href = "about.html";
+            }
+            function contactPage() {
+                window.location.href = "contact.html";
+            }
+            function joinPage() {
+                window.location.href = "joinUs.html";
+            }
+            function collaboradorsPage() {
+                window.location.href = "collaborators.html";
+            }
+            function foundersPage(){
+                window.location.href = "founders.html";
+            }
+        </script>
+        <style>
+            h1{
+                margin-top: 6%;
+                text-align: center;
+                font-size: 120%;
+            }
+            p{
+                margin-top: 1%;
+                text-align: center;
+                font-size: 110%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .bt1{
+                float: left;
+                display: block;
+                padding: 5px 30px;
+                border: none;
+                outline: none;
+                background-color: #000000;
+                color: #fff;
+                text-shadow: 0 0 5px rgb(0, 0, 0);
+                font-size: 17px;
+                font-family: inherit;
+                font-family:'open_sansregular';
+                border-radius: 6px;
+                margin: 20px center;
+                margin-left: 11.7%;
+                cursor: pointer;
+                transition: all 0.3s;
+                text-align: center;
+            }
+            .bt1:hover {
+                background-color: #444444;
+                transform: scale(1.03);
+            }
+            .botao{
+                text-align: center;
+                margin-left: 39%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="index.html" class="w3-bar-item w3-button"><b>RBC</b> Research Behavioral Corporation</a>
+                <!-- Float links to the right. Hide them on small screens -->
+                <div class="w3-right w3-hide-small">
+                    <button onclick=collaboradorsPage() class="w3-bar-item w3-button">Collaborators</a>
+                    <button onclick=aboutPage() class="w3-bar-item w3-button">About</a>
+                    <button onclick=contactPage() class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+        </div>
+
+            <h1>Our Story</h1>
+            <p><i>⠀⠀⠀⠀⠀⠀RBC is a prestigious institution in the field of neuroscience and scientific social studies, established four decades ago from the merger of two major companies, Synergy Inc. and Ethno Insights, originating from the Holloway and Callahan families. This union was founded in a unique context, marked by the marital union between the heirs of the respective families, consolidating not only a family bond but also a strategic partnership in the professional sphere. With a four-decade legacy, the company is recognized for its excellence in research and development, making significant contributions to advances in neuroscience and the application of social studies. The RBC remains committed to leadership in its field, driving new technologies and solutions for contemporary challenges in mental health and social well-being.</i></p>
+            <br>
+            <div class="rbcImage">
+                <img class= "w3-card" src="https://i.imgur.com/hUmVGeF.png" style="width: 480px; display: block; margin: auto; border-radius: 5%;">
+            </div>
+
+            <h1>Our Values</h1>
+            <p><i>⠀⠀⠀⠀The mission of RBC is to lead by example in the research and application of neuroscientific and social studies, constantly aiming to contribute to the well-being and progress of society. Our vision is to shape a future where knowledge and understanding of the brain and human behavior promote a healthier and more harmonious world. Our core values include integrity, excellence, and social responsibility, reflecting our commitment to conducting high-quality studies that inspire trust and foster positive change in the global community.</i></p>
+            <br>
+            <div class="rbcImage">
+                <img class= "w3-card" src="https://i.imgur.com/atN0k0C.jpeg" style="width: 480px; display: block; margin: auto; border-radius: 5%;">
+            </div>
+
+            <h1>Our Family</h1>
+            <p><i>⠀⠀⠀Our employees are the backbone of our company, essential for the success and continuous growth of the organization. Here at RBC, we cherish every member of our team as part of our corporate family. We strive to create an inclusive and welcoming work environment where everyone feels valued, respected, and empowered to contribute their unique skills and ideas towards achieving our common goals.</i></p>
+            <br>
+            <div class="botao">
+                <input type="button" onclick=foundersPage() class="bt1" id="bt1" name="bt1" value="Know them">
+            </div>
+            
+
+            <br><br><br><br><br><br><br><br><br>
+            <!-- Footer -->
+            <footer class="w3-center w3-white w3-padding-16 w3-card">
+                <p><i>Together to change the world. <a onclick=joinPage() title="Home" target="_blank" class="w3-hover-text-green"></i><u>Join us</u></a></p>
+            </footer>
+            
+    </body>
+</html>
